@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="./main.js"></script>
+  </head>
+  <body id="home" class="">
+    <div
+      class="flex flex-row sticky items-center space-x-2 text-white w-screen h-[60px] border drop-shadow-xl bg-white"
+    >
+      <button onclick="pr()" class="ml-4 bg-green-600 h-[36px] rounded-lg w-[72px]">
+        Profile
+      </button>
+      <button onclick="logout()" class="ml-4 bg-green-600 h-[36px] rounded-lg w-[72px]">
+        Logout
+      </button>
+    </div>
+    <div id="app " class="flex flex-row space-x-2">
+        <img class="  object-fill " src="https://i1.sndcdn.com/avatars-6CkzcHmzyH2x6Sd5-nhcPdg-t1080x1080.jpg" alt="">
+        <div id="info">
+            <p>gai xinh</p>
+        </div>
+    </div>
+    <script>
+        function pr(){
+            document.getElementById("info").innerHTML = `gai xinh`
+        }
+      function logout(){
+        localStorage.removeItem("token")
+        alert("Logout thành công")
+        window.location.href = "/index.html"
+      }
+    </script>
+  </body>
+</html>
